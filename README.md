@@ -8,4 +8,4 @@
 - env dosyasına DB_DATABASE_TEST değişkenini test edilecek db olarak eklenir
 - php artisan passport:keys çalıştırılır
 - php artisan key:generate çalıştırılır
-- chmod 777 storage/ ile proje dizininde izin verlir.
+- chmod 777 -R storage/ ile proje dizininde izin verlir.
