@@ -16,6 +16,7 @@
 
 Not: Github repoma collection u json olarak ekliyorum
 
+github da api olarak paylaşacaktım ancak secret olarak gördü o yüzden paylaştırtmadı. ben de repoya json collection ekledim.
 <hr>
 
 ### Komutlar
