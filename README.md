@@ -17,3 +17,23 @@
 Not: Github repoma collection u json olarak ekliyorum
 
 <hr>
+
+### Komutlar
+
+php artisan app:integration-command {type} {integration} {username} {password} {id}
+
+
+- Ekleme
+\`\`\`bash
+php artisan app:integration-command add hepsiburada null null null
+\`\`\`
+- Düzeneleme
+\`\`\`bash
+php artisan app:integration-command update getir null null 2
+\`\`\`
+- Silme
+\`\`\`bash
+php artisan app:integration-command delete null null null 2
+\`\`\`
+
+<hr> 
