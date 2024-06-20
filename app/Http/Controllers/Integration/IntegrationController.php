@@ -18,7 +18,7 @@ class IntegrationController extends Controller
     public function list(){
 
         $integrations = $this->integrationRepository->all();
-        return response()->json($integrations);
+        return response()->json(array('success'=> true, 'integrations' => $integrations));
     }
 
     public function store(Request $request){

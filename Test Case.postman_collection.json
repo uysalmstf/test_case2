@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "1e1cc336-a25d-4801-9640-66df34f4dfcd",
+		"name": "Test Case",
+		"description": "Burada Test Case ile ilgili bilgiler yer almaktadır.\n\nAuth klasörü: Login ve Register işlemlerini kapsar.\n\nIntegration klasörü: Integration işlemlerini kapsar. bunu çalıştırmak için login olmak zorundasınız.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1301963"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mustafa\",\n    \"email\": \"a@b.com\",\n    \"password\": \"102030\",\n    \"password_confirmation\": \"102030\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						},
+						"description": "Sisteme kayıt olmayı sağlar."
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"a@b.com\",\n    \"password\": \"102030\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						},
+						"description": "Sisteme Login olmayı sağlar."
+					},
+					"response": []
+				}
+			],
+			"description": "Login ve Register işlemlerini kapsar."
+		},
+		{
+			"name": "Integration",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/integration/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"integration",
+								"list"
+							]
+						},
+						"description": "İntegrationların listesini bize verir"
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"1234\",\n    \"password\" : \"aaa\",\n    \"integration\": \"hepsiburada\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/integration/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"integration",
+								"store"
+							]
+						},
+						"description": "İntegrasyon kayıt işlemini yapar."
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"1234\",\n    \"password\" : \"aaa\",\n    \"integration\": \"getir\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/integration/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"integration",
+								"update",
+								"1"
+							]
+						},
+						"description": "integrasyon update işlemini yapar."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/integration/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"integration",
+								"delete"
+							]
+						},
+						"description": "integrasyonu veri tabanından siler."
+					},
+					"response": []
+				}
+			],
+			"description": "Integration işlemlerini kapsar. bunu çalıştırmak için login olmak zorundasınız."
+		}
+	]
+}

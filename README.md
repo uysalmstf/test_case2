@@ -9,3 +9,11 @@
 - php artisan passport:keys çalıştırılır
 - php artisan key:generate çalıştırılır
 - chmod 777 -R storage/ ile proje dizininde izin verlir.
+- .env dosyanızda SESSION_DRIVER alanını file olarak değiştirin
+
+
+<hr>
+
+Not: Github repoma collection u json olarak ekliyorum
+
+<hr>
